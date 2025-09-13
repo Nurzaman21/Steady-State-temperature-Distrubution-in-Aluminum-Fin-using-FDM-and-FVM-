@@ -3,11 +3,11 @@
 
 The objective is to compare the steady-state temperature distribution in an aluminum fin using two numerical methods: Finite Difference Method (FDM) and Finite Volume Method (FVM).
 
-**PROBLEM STATEMENT**
+<ins>**PROBLEM STATEMENT**</ins>
 
 The fin, with an initially uniform temperature of 30°C , as  its  base  maintained  at  a  constant  temperature of 100°C, while the tip is insulated. Fin's geometrical parameters are mentioned in the Heat Conduction png file. By applying the Finite Difference Method (FDM) and Finite Volume Method (FVM) in MATLAB  , the temperature   profile    along   the   length   of   the fin  is   calculated    under  steady - state  conditions.    The    insulated     tip    condition    is    incorporated     into     the    numerical model  to   ensure accurate representation of   the  physical  scenario. The  results  demonstrate  the effectiveness of   the finite difference   method  in   solving  heat  transfer  problems   and   provide insights  into   the thermal behavior of aluminum fins under specified boundary conditions.
 
-**FORMULATION FOR FDM**
+<ins>**FORMULATION FOR FDM**</ins>
 
 Refer to FDM Discretization png file. 
 
@@ -50,7 +50,7 @@ so, −Ti−1​+(2+m2dx2)Ti​−Ti+1​=m2dx2T∞​
 Take number of nodes n=50
 
 
-**FORMULATION FOR FVM**
+<ins>**FORMULATION FOR FVM**</ins>
 
 Start from the steady ODE form
 dx/d(kAdx/dT)+hP(T−T∞)=0
@@ -69,7 +69,7 @@ At Insulated tip (x=L): zero flux at the tip. For the last CV we treat the east 
 P(dx/2)
 
 
-**RESULTS**
+<ins>**RESULTS**</ins>
 
 1. The steady-state temperature distribution along the aluminum fin was computed using both the Finite Difference Method (FDM) and the Finite Volume Method (FVM) in MATLAB.
 
@@ -87,7 +87,7 @@ P(dx/2)
 
 
 
-**CONCLUSION**
+<ins>**CONCLUSION**</ins>
 
 Both FDM and FVM successfully captured the steady-state heat conduction with convection in the fin under the given boundary conditions (base at 100 °C, tip insulated, ambient 30 °C). The results demonstrate that FDM and FVM give nearly identical temperature distributions, with very small numerical discrepancies. FDM is simpler to implement and computationally efficient for 1D steady problems. FVM, though slightly more involved, provides a more physically conservative approach (energy balance per control volume) and is generally more robust for multidimensional or complex geometries. For this 1D fin conduction problem, either method is equally reliable, but FVM becomes advantageous for higher-dimensional or irregular geometries where strict conservation is critical.
 
